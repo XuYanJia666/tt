@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .over {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>海贼王</td>
+            <td>路费</td>
+            <td>232</td>
+            <td>橡胶果实</td>
+            <td>草帽</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>海贼王</td>
+            <td>路费</td>
+            <td>232</td>
+            <td>橡胶果实</td>
+            <td>草帽</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>海贼王</td>
+            <td>路费</td>
+            <td>232</td>
+            <td>橡胶果实</td>
+            <td>草帽</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>海贼王</td>
+            <td>路费</td>
+            <td>232</td>
+            <td>橡胶果实</td>
+            <td>草帽</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>海贼王</td>
+            <td>路费</td>
+            <td>232</td>
+            <td>橡胶果实</td>
+            <td>草帽</td>
+            <td>1</td>
+        </tr>
+    </table>
+</body>
+<script>
+    var trs = document.querySelectorAll('tr');
+    for (var i = 0; i < trs.length; i++) {
+        trs[i].onmouseout = function () {
+            this.className = '';
+        }
+        trs[i].onmouseover = function () {
+            this.className = 'over';
+        }
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <input type="checkbox" name="" id="all">
+                </th>
+                <th>商品</th>
+                <th>价钱</th>
+            </tr>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id="tabs">
+                </td>
+                <td>iPhone</td>
+                <td>5555</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id="tabs">
+                </td>
+                <td>iPhone</td>
+                <td>5555</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id="tabs">
+                </td>
+                <td>iPhone</td>
+                <td>5555</td>
+            </tr>
+        </tbody>
+        </thead>
+    </table>
+</body>
+<script>
+    var all = document.querySelector('#all');
+    var tabs = document.querySelectorAll('#tabs');
+    all.onclick = function () {
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].checked = this.checked;
+        }
+    }
+    for (var i = 0; i < tabs.length; i++) {
+        tabs[i].onclick = function () {
+            var flag = true;
+            for (var j = 0; j < tabs.length; j++) {
+                if (!tabs[j].checked) {
+                    flag = false;
+                }
+            }
+            all.checked = flag;
+        }
+    }
+</script>
+
+</html>
